@@ -1,0 +1,106 @@
+<html>
+	<head>
+		<title>02 Tables Example</title>
+		<style>
+			table, th, td 
+			{
+				border: 1px solid black;
+				border-collapse: collapse;
+			}
+			table#tbl_02, table#tbl_03
+			{
+				width: 100%;
+				background-color: #00ffff;
+			}
+		</style>
+	<body>
+		<h2>Josh Lin</h2>
+		<table id="tbl_01">
+			<thead>
+				<tr>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th align="left">Major</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Bill</td>
+					<td>Iken</td>
+					<td>IT Analytics</td>
+				</tr>
+				<tr>
+					<td>Jill</td>
+					<td>Iken</td>
+					<td>Accounting</td>
+				</tr>
+				<tr>
+					<td>Josh</td>
+					<td>Lin</td>
+					<td>ITM</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<br>
+		
+		<table id="tbl_02">
+			<thead>
+				<tr>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th align="left">Sport</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Bill</td>
+					<td>Iken</td>
+					<td>Soccer</td>
+				</tr>
+				<tr>
+					<td>Jill</td>
+					<td>Iken</td>
+					<td>Basketball</td>
+				</tr>
+				<tr>
+					<td>Josh</td>
+					<td>Lin</td>
+					<td>Track and Field</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<br>
+		
+		<table id="tbl_03">
+			<thead>
+				<tr>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th align="left">Sport</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Bill</td>
+					<td>Iken</td>
+					<td>Soccer</td>
+				</tr>
+				<tr>
+					<td>Jill</td>
+					<td>Iken</td>
+					<td>Basketball</td>
+				</tr>
+				<tr>
+					<td>Josh</td>
+					<td>Lin</td>
+					<td>Track and Field</td>
+				</tr>
+			</tbody>
+		</table>
+		
+	</body>
+	</head>
+</html>
+//This is the Tutorial that taught how to make tables in an XML file.
