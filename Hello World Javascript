@@ -1,0 +1,13 @@
+<html>
+	<head>
+		<title>JavaScript Hello World JoshL</title>
+		<script language="javascript">
+			alert("Hello World");
+		</script>
+	</head>
+	<body>
+		<h2>ITM3100</h2>
+	</body>
+</html>
+
+//This script teaches how to incorporate javascript into an XML based file.
