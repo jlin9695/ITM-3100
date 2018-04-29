@@ -1,0 +1,43 @@
+<html>
+
+	<!-- This is how you include comments in HTML -->
+	<!-- 04_JavaScriptCalculator By Josh Lin -->
+	<head>
+		<title>ITM3100 JavaScript Calculator</title>
+		<link rel="stylesheet" href="05_JavaScript_Structures.css" />
+	</head>
+	<body>
+		<h3>ITM3100 JavaScript Calculator<br />Josh Lin</h3>
+		<table border=1>
+			<thead>
+				<tr>
+					<th>Value A</th>
+					<th>Value B</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<input type="text" id="txt_ValueA" size=10 />
+					</td>
+					<td>
+						<input type="text" id="txt_ValueB" size=10 /> 
+					</td>
+				</tr>
+				<tr>
+					<td colspan=2>
+						<input type="button" value="Add" onClick="fn_Add()" />
+						<input type="button" value="Sub" onClick="fn_Sub()" />
+						<input type="button" value="Mult" onClick="fn_Mult()" />
+						<input type="button" value="Div" onClick="fn_Div()" />
+					</td>
+				</tr>
+				<tr>
+					<td colspan=2>
+						<p id="p_Results" />
+					</td>
+				</tr>
+			</tbody>
+	</body>
+<html/>
+
