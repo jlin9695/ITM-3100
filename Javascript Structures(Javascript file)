@@ -1,0 +1,205 @@
+			// JavaScript Single Line Comments Begin with Two Forward Slashes
+			// Often useful in testing and stubbbing out code
+			
+			/* Block Comments start with the slash asterisk and continue
+				across multiple lines until the asterisk slash */
+
+//			Often use comments to "comment out code temporarily"				
+//			alert("JavaScript"); 
+
+				var varA;
+				var varB;
+				var varResult;
+				var varX;
+				var varY;
+			
+			function fn_Add()
+			{				
+				varA = parseInt(document.getElementById("txt_ValueA").value);
+				varB = parseInt(document.getElementById("txt_ValueB").value);
+				varResult = varA + varB;
+				document.getElementById("p_Results").innerHTML = varResult;
+			}
+			
+			function fn_Sub()
+			{
+				varA = parseInt(document.getElementById("txt_ValueA").value);
+				varB = parseInt(document.getElementById("txt_ValueB").value);
+				varResult = varA - varB;
+				document.getElementById("p_Results").innerHTML = varResult;
+			}
+			
+			function fn_Mult()
+			{
+				varA = parseInt(document.getElementById("txt_ValueA").value);
+				varB = parseInt(document.getElementById("txt_ValueB").value);
+				varResult = varA * varB;
+				document.getElementById("p_Results").innerHTML = varResult;
+			}
+			
+			function fn_Div()
+			{
+				varA = parseInt(document.getElementById("txt_ValueA").value);
+				varB = parseInt(document.getElementById("txt_ValueB").value);
+				varResult = varA/varB;
+				document.getElementById("p_Results").innerHTML = varResult;
+			}
+			function fn_Max()
+			{
+				varX = parseInt(document.getElementById("txt_x").value);
+				varY = parseInt(document.getElementById("txt_y").value);
+				if (varX > varY) 
+				{
+					varResult = "Var X " + varX + " is greater.";
+				}
+				else
+				{
+					if (varY > varX) 
+					{
+						varResult = "Var Y " + varY + " is greater.";
+					}
+					else 
+					{
+						varResult = "Both variables are equal.";
+					}
+				}
+				document.getElementById("p_Outcome").innerHTML = varResult;
+			}
+			
+			function fn_Min()
+			{
+				varX = parseInt(document.getElementById("txt_x").value);
+				varY = parseInt(document.getElementById("txt_y").value);
+				if (varX < varY)
+				{
+					varResult = "Var X " + varX + " is less.";
+				} //end if
+				else
+				{
+					if(varY < varX)
+					{
+						varResult = "Var Y " + varY + " is less";
+					}//end if
+					else
+					{
+						varResult = "X and Y are equal buddy. Eat a Snickers, you're not smart when you're hungry.";
+					}//end else
+						
+				} //end else
+				document.getElementById("p_Outcome").innerHTML = varResult;
+			} //end function fn_Min
+			
+			function fn_Switch()
+			{
+				varX = parseInt(document.getElementById("txt_x").value);
+				varY = parseInt(document.getElementById("txt_y").value);
+				
+				switch(varX)
+				{
+					case 1:
+						varResult="Sunday";
+						break;
+					case 2:
+						varResult="Monday";
+						break;
+					case 3:
+						varResult="Tuesday";
+						break;
+					case 4:
+						varResult="Wednesday";
+						break;
+					case 5:
+						varResult="Thursday";
+						break;
+					case 6:
+						varResult="Friday";
+						break;
+					case 7:
+						varResult="Saturday";
+						break;
+					default:
+						varResult="Error - Invalid Day of week";
+						break;
+				}
+				document.getElementById("p_Outcome").innerHTML = varResult;
+			}//end fn_Switch
+			
+			function fn_while()
+			{
+				varX = parseInt(document.getElementById("txt_x").value);
+				varY = parseInt(document.getElementById("txt_y").value);
+				varResult= "";
+				
+				while(varX < varY)
+				{
+					varResult = varResult + ", " + varX;
+					varX = varX + 1;
+				}//end while
+				
+				document.getElementById("p_Outcome").innerHTML = varResult;
+				
+			}//end fn_while
+			
+			function fn_DoWhile()
+			{
+				varX = parseInt(document.getElementById("txt_x").value);
+				varY = parseInt(document.getElementById("txt_y").value);
+				varResult= "";
+				
+				do
+				{
+					varResult = varResult + ", " + varX;
+					varX = varX + 1;
+				} while(varX < varY); //end do while
+				
+				document.getElementById("p_Outcome").innerHTML = varResult;
+			}//end fn_DoWhile
+			
+			function fn_For()
+			{
+				varX = parseInt(document.getElementById("txt_x").value);
+				varResult = "";
+				
+				for(var intI = 1; intI <= varX; intI++)
+				{
+					varResult += intI + " ";
+				}
+				document.getElementById("p_Outcome").innerHTML = varResult;
+				
+			}
+			
+			function fn_ForFact()
+			{
+				varX = parseInt(document.getElementById("txt_x").value);
+				varY = parseInt(document.getElementById("txt_y").value);
+				varResult = "The Factorial of " + varX + " is ";
+				
+				for(varBaseX = (varX - 1); varBaseX > 1; varBaseX--)
+				{
+					varX = varX * varBaseX;
+				}
+				varResult += varX;
+				document.getElementById("p_Outcome").innerHTML = varResult;
+				
+			}
+			function fn_ForFact2()
+			{
+				varX = parseInt(document.getElementById("txt_x").value);
+				varY = parseInt(document.getElementById("txt_y").value);
+				varResult = "The Factorial of " + varX + " is ";
+				
+				for(varBaseX = (varX - 1); varBaseX > 1; varBaseX--)
+				{
+					varX = varX * varBaseX;
+				}
+				varResult += varX;
+				varResult += "<br> The Factorial for " + varY + " is ";
+				for(varBaseY = (varY - 1); varBaseY > 1; varBaseY--)
+				{
+					varY = varY * varBaseY;
+				}
+				varResult += varY
+				document.getElementById("p_Outcome").innerHTML = varResult;
+			}
+			
+			
