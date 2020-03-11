@@ -1,0 +1,87 @@
+<html>
+	<head>
+		<title>Build Array and Average</title>
+		<script>
+		
+			function fn_Create()
+			{
+				var strHTML;
+				var frmCreation;
+				var intValues;
+				
+				intValues = parseInt(document.getElementById("txt_Value").value);
+				frmCreation = document.getElementById("p_Creation");
+				
+				strHTML = "<table border=1><thead><tr><th>Row Number</th><th>Value</th></tr></thead><tbody>";
+				
+				for (var row = 1; row <= intValues; row++)
+				{
+					strHTML += "<tr><td>Row " + row + "</td><td><input type='text' class='txt_Values' size=5></input></td></tr>";
+				}
+				
+				strHTML += "<tr><td colspan=2 align='center'><input type='button' name='btn_Process' onClick='fn_Mean()' value='Process Average'></input><input type='button' name='btn_Below' onClick='fn_BelowAverage()' value='Extra'></input></td></tr></tbody></table>";
+				
+				frmCreation.innerHTML = strHTML;
+			}
+			
+			function fn_Mean()
+			{
+				var ArrValues = document.getElementsByClassName("txt_Values");
+				var intIndex = 0;
+				var intAverage = 0;
+				
+				for (intIndex = 0; intIndex < ArrValues.length; intIndex++)
+				{
+					intAverage += parseInt(ArrValues[intIndex].value) / ArrValues.length;
+				}
+				
+				document.getElementById("p_Average").innerHTML = "The average of this set of numbers is " + intAverage + ". ";
+			}
+			
+			function fn_BelowAverage()
+			{
+				var BelowAverage = [];
+				var BlwAvg = [];
+				var intIndex2 = 0;
+				var varValues = 0;
+				
+				
+				for (intIndex2 = 0; intIndex2 < ArrValues.length; intIndex2++)
+				{
+				
+					
+					if (ArrValues[intIndex2] < intAverage2)
+					{
+						BlwAvg.push(ArrValues[intIndex2]);
+					}
+					
+				}
+				
+				document.getElementById("p_Extra").innerHTML = BlwAvg;
+			}
+		
+		
+		</script>
+	</head>
+	<body>
+		<h3><br>Midterm Review<br>Making Dynamic Form and Mean</h3>
+		<table border=1>
+			<thead>
+				<tr>
+					<th>Enter Value <br>and then<br> Press Tab</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td align="center"><input type="text" id="txt_Value" size=10 onChange="fn_Create()"</input></td>
+				</tr>
+			</tbody>
+		</table>
+		<br>
+		<p id="p_Creation"></p>
+		<br>
+		<p id="p_Average"></p>
+		<br>
+		<p id="p_Extra"></p>
+	</body>
+</html>
