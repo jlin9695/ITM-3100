@@ -1,0 +1,36 @@
+What is a computer (Processor, memory(short and volatile) storage, fetch and execute
+
+what is a machine language
+
+History of the internet (1968 or 72(TCIP publications), 1982 (IBM pc)(Creates users, nodes), 1989(WWW TIm Berners-Lee)(CERN), 1991 (Gov releases WWW for public use) (Gulf War-Blogs), 1994 (Java/JavaScript)
+
+Know HTTP, TCIP, XSL, HTML, CSS, JSON, XML, XSD
+
+Javascript-Not much. We have proven ourselves in that regard in the midterm. Structure programming- sequence, selection(if/switch), and repetition(for/while), what is variable vs objects.
+
+SAP emphasis(slight)
+	-HANA is big offering, 
+	Know in memory, column/oriented.
+	ABAP(Language of SAP originally written in.)
+	JDBC-Java database connectivity
+	ODBC-Open database connectivity
+ 
+Realize we have done all of work on the web-based IDE -all of it posted on the web.
+
+Know what CDS is, HDBDD, HDBTI
+know context, entity, associations, indexes.
+Given sales order, explain one-to many.
+
+rest architecturem, restful architecture
+what does it mean to be stateless
+HTTP response..(??)
+Odata- XXO data file is oData commands.
+know what UI5 is - model, view, controller - what each are.
+
+know what an application, xsapp, xsaccess, componentjs file.
+IaaS - Infrastructure as a service
+PaaS - Platform
+SaaS - Software
+
+
+Practical - oData replication.

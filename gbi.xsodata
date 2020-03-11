@@ -1,0 +1,33 @@
+service {
+    "gbi-student-369.gbi.data::GBI_369.MASTERDATA.CUSTOMERS" as "Customers"
+        navigates ("Orders" as "CustNames");
+    "gbi-student-369.gbi.data::GBI_369.MASTERDATA.SALES_ORGS" as "SalesOrg"
+        navigates ("SOrg_Customers" as "SOrgCustomers");
+        
+    association "SOrg_Customers" principal "SalesOrg"("ID") multiplicity "1"
+    dependent "Customers"("SalesOrgID") multiplicity "*";
+    
+
+    "gbi-student-369.gbi.data::GBI_369.SALES.SALES_ORDERS" as "SalesOrders"
+        navigates ("Orders" as "Orders");
+        
+    association "Orders" principal "Customers"("ID.CustomerID") multiplicity "1"
+    dependent "SalesOrders"("CustomerID") multiplicity "*";
+    
+    "gbi-student-369.gbi.data::GBI_369.SALES.SALES_ORDER_DETAILS" as "SalesDetails"
+        navigates ("Details" as "Details");
+        
+    association "Details" principal "SalesOrders"("ID.OrderID") multiplicity "1"
+    dependent "SalesDetails"("OrderID") multiplicity "*";
+    
+    "gbi-student-369.gbi.data::GBI_369.SALES.SalesByCustomer" as "SalesByCustomer"
+        key generate local "GenID";
+    "gbi-student-369.gbi.data::GBI_369.MASTERDATA.CustomerSales" as "CustomerSales"
+        key generate local "GenID";
+    "gbi-student-369.gbi.data::GBI_369.SALES.SALES_ORDERS" as "SalesRevenue"
+        key generate local "GenID"
+        aggregates always (SUM of "GrossAmount.Amount");
+    "gbi-student-369.gbi.data::GBI_369.SALES.SALES_ORDER_DETAILS" as "Quantity"    
+        key generate local "GenID"
+        aggregates always (SUM of "Quantity");
+    }
