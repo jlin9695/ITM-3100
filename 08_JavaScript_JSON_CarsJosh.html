@@ -1,0 +1,53 @@
+<html>
+	<head>
+		<title>ITM3100 FL17 JSON Example</title>
+		<script>
+		
+		
+		function fn_runJSON()
+			{
+			var custCars_JSONObject;
+			var car;
+			var model;
+			var strResult;
+			var tmpCar;
+			
+			strResult = "";
+			
+			custCars_JSONObject = 
+				{
+					"name":"Bill",
+					"age":30,
+					"cars":
+						[
+							{"name":"Ford", "models":["F150","Focus","Mustang"] },
+							{"name":"BMW", "models":["320","X3","X5"] },
+							{"name":"Tesla", "models":["X","S"] }
+						]
+				} //end JSONObject Definition
+				
+			strResult += custCars_JSONObject.name + "<br>" + custCars_JSONObject.age + "<br>";
+			
+			for (tmpCar in custCars_JSONObject.cars)
+			{
+				strResult += "&nbsp&nbsp&nbsp" + custCars_JSONObject.cars[tmpCar].name + "<br>";
+				
+				for(tmpModel in custCars_JSONObject.cars[tmpCar].models)
+				{
+					strResult += "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + custCars_JSONObject.cars[tmpCar].models[tmpModel] + "<br>";
+				}//end for - process models within cars
+				
+				
+			} //end for - process each car within JSON object
+			
+			document.getElementById("p_JoshJSON").innerHTML = strResult;
+			} //end Function fn_runJSON
+		</script>
+	</head>
+	<body>
+		<h3>Josh Lin<br>ITM3100 FL17 JSON Example</h3>
+		<br>
+		<input type="button" id="btn_runJSON" onClick="fn_runJSON()" value="Test JSON"></input>
+		<p id="p_JoshJSON">Default p_JoshJSON Text</p>
+	</body>
+</html>

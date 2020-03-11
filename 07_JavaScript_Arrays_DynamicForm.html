@@ -1,0 +1,67 @@
+<html>
+	<head>
+		<title>ITM3100 In Class 07 Dynamic Form</title>
+		<script>
+			
+			function fn_BuildForm()
+			{
+				
+				var strHTML;
+				var frmDynForm
+				var intValues;
+				intValues = parseInt(document.getElementById("txt_Numbers").value);
+				frmDynForm = document.getElementById("p_DynamicForm");
+				
+				strHTML = "<table border='2'><thead><tr><th>Position</th><th>Value</th></tr></thead>";
+				strHTML += "<tbody>";
+				
+				for (var row= 1; row <= intValues; row++)
+				{
+					strHTML += "<tr><td>Row " + row + "</td>";
+					strHTML += "<td><input type='text' class='txt_Values' size='5'></input></td></tr>";
+				} //end for
+				
+				strHTML += "<tr><td colspan='2' align='center'>";
+				strHTML += "<input type='button' name='btn_Process' onClick='fn_Process()' value='Process'></input>";
+				strHTML += "</td></tr>";
+				
+				strHTML += "</tbody>";
+				strHTML += "</table>";
+				
+				frmDynForm.innerHTML = strHTML;
+				
+			}
+			
+			function fn_Process()
+			{
+				alert("Ready to Do Homework");
+			}
+			
+		</script>
+	</head>
+	<body>
+		<h3>Josh Lin<br>ITM3100 In Class<br>07 Dynamic Form</h3>
+		
+		<table border=1>
+			<thead>
+				<tr>
+					<th>Enter<br>Number of Values<br>To Be Processed<br>and Press Tab</th>
+				</tr>
+			</thead>
+			<tbody>
+			<form id="frm_BaseForm">
+				<tr>
+					<td align="middle"><input type="text" id="txt_Numbers" size="10"
+							onChange="fn_BuildForm()"></input>
+					</td>
+				</tr>
+				</form>
+			</tbody>
+		</table>
+		
+		<br><br>
+		
+		<p id="p_DynamicForm" />
+		
+	</body>
+</html>

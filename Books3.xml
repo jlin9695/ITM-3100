@@ -1,0 +1,54 @@
+<?xml-stylesheet type="text/xsl" href="Books3.xsl" ?>
+<books>
+	<book>
+		<title>Intro to SAP HANA</title>
+		<isbn>978-555444333</isbn>
+		<publisher>Pearson Education</publisher>
+		<authors>
+			<author>
+				<firstn>Bill</firstn>
+				<lastn>Iken</lastn>
+			</author>
+		</authors>
+		<pub_date>2013-04-12</pub_date>
+		<price>175.00</price>
+	</book>
+	<book>
+		<title>A Season to Remember: Bills Win NCAA Basketball Title 2017-18</title>
+		<isbn>777-777777777</isbn>
+		<publisher>SLU Athletics</publisher>
+		<authors>
+			<author>
+				<firstn>Lisa</firstn>
+				<lastn>Stone</lastn>
+				<nationality>SLU Nation</nationality>
+			</author>
+			<author>
+				<firstn>Travis</firstn>
+				<lastn>Ford</lastn>
+				<nationality>SLU Nation</nationality>
+			</author>
+		</authors>
+		<pub_date>2018-04-03</pub_date>
+		<price>0.00</price>
+	</book>
+	<book>
+		<title>Would You Baptise an Extraterrestial</title>
+		<isbn>978-089999999</isbn>
+		<publisher>Vatican Press</publisher>
+		<authors>
+			<author>
+				<firstn>Guy</firstn>
+				<lastn>Consolmagno</lastn>
+				<nationality>Italian</nationality>
+			</author>
+			<author>
+				<firstn>Paul</firstn>
+				<lastn>Mueller</lastn>
+				<nationality>USA</nationality>
+			</author>
+		</authors>
+		<pub_date>2011-02-08</pub_date>
+		<price>59.50</price>
+	</book>
+</books>

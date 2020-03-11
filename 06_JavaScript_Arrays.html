@@ -1,0 +1,112 @@
+<html>
+	<head>
+		<title>Lin ITM3100 In Class Arrays</title>
+		<script>
+//			alert("Test");
+		function fn_TestArray1()
+		{
+			var varResult;
+			var array1 = ["The","rain","in","Spain","falls","mainly","on","the","plain"];
+			varResult = "array1 contains -->" + array1 + "<--<p />";
+			
+			for (var index=0; index < array1.length; index++)
+			{
+				varResult += "element " + index + " is " + array1[index] + "<br>";
+			} //end for - process array
+			
+			p_Outcome.innerHTML = varResult;
+		}
+		
+		function fn_Sum()
+		{
+			var arrValues = document.getElementsByClassName("txt_Input");
+			var intIndex;
+			var intSum = 0;
+			
+			for (intIndex = 0; intIndex < arrValues.length; intIndex++)
+			{
+				alert("Input" + intIndex + "-->" + arrValues[intIndex].value + "<--");
+				intSum += parseInt(arrValues[intIndex].value);
+				arrValues[intIndex].value = "XXXX";
+			} //end for
+			
+			document.getElementById("p_Outcome").innerHTML = "The Sum is " + intSum
+			
+		}	//end fn_Sum
+		</script>
+	</head>
+	<body>
+		<h3>Josh Lin<br>In Class Arrays</h3> 
+		<form name="frm_UserInput">
+			<table border=1>
+				<thead>
+				<tr>
+					<th colspan=2>Department</th>
+				</tr>
+				<tr>
+					<th>Code</th>
+					<th>Name</th>
+				</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td colspan="2"><input type="button" id="btn_Exec" onClick="fn_TestArray1()" value="Test Array"></input></td>
+					</tr>
+				</tbody>
+			</table>
+		</form>
+		
+		<br><br>
+		
+		<form name="frm_MultiInput">
+			<table border=1>
+			<thead>
+				<tr>
+					<td>Value</td>
+					<td>Input</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Value 1</td>
+					<td>
+						<input type="text" class="txt_Input" size=10></input>
+					</td>
+				</tr>
+				<tr>
+					<td>Value 2</td>
+					<td>
+						<input type="text" class="txt_Input" size=10></input>
+					</td>
+				</tr>
+				<tr>
+					<td>Value 3</td>
+					<td>
+						<input type="text" class="txt_Input" size=10></input>
+					</td>
+				</tr>
+				<tr>
+					<td>Value 4</td>
+					<td>
+						<input type="text" class="txt_Input" size=10></input>
+					</td>
+				</tr>
+				<tr>
+					<td>Value 5</td>
+					<td>
+						<input type="text" class="txt_Input" size=10></input>
+					</td>
+				</tr>
+				<tr>
+					<td colspan=2 align="middle">
+						<input type="button" name="btn_Sum" onClick="fn_Sum()" value="Sum"></input>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+		</form>
+		
+		<p id="p_Outcome" />
+		
+	</body>
+</html>
